@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>のびサポ｜飲食の現場を知るSNSコンサル（埼玉県寄居町）</title>
+  <meta name="description" content="のびサポは、埼玉県寄居町を拠点に活動するSNSコンサルです。飲食の現場経験を活かし、地域のお店のInstagramを売上につながる形に育てます。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== SVG装飾パーツ（線画） =====================
+       ページ内で <svg><use href="#i-heart"/></svg> のように呼び出して使います。
+       種類：i-heart（ハート）/ i-heart-broken（割れハート）/ i-ribbon（リボン）
+             i-cross（十字）/ i-bandage（絆創膏）/ i-sparkle（キラキラ）
+  ================================================================== -->
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path d="M12 20.5s-7.8-4.7-7.8-10.4A4.3 4.3 0 0 1 12 7.5a4.3 4.3 0 0 1 7.8 2.6c0 5.7-7.8 10.4-7.8 10.4z"/>
+    </symbol>
+    <symbol id="i-heart-broken" viewBox="0 0 24 24">
+      <path d="M12 20.5s-7.8-4.7-7.8-10.4A4.3 4.3 0 0 1 12 7.5a4.3 4.3 0 0 1 7.8 2.6c0 5.7-7.8 10.4-7.8 10.4z"/>
+      <path d="M12 7.5l-1.6 3.6 2.6 2.1-2 3.6"/>
+    </symbol>
+    <symbol id="i-ribbon" viewBox="0 0 24 24">
+      <path d="M12 10.5C9.5 6.5 3.5 5.5 3.5 9s6 5.5 8.5 1.5z"/>
+      <path d="M12 10.5c2.5-4 8.5-5 8.5-1.5s-6 5.5-8.5 1.5z"/>
+      <circle cx="12" cy="10.5" r="1.6"/>
+      <path d="M11 12l-3.2 7.5 1.9-.6 1 1.6L12.4 12"/>
+      <path d="M13 12l3.2 7.5-1.9-.6-1 1.6L11.6 12"/>
+    </symbol>
+    <symbol id="i-cross" viewBox="0 0 24 24">
+      <path d="M10 2.5h4v6h6v4h-6v9h-4v-9H4v-4h6z"/>
+    </symbol>
+    <symbol id="i-bandage" viewBox="0 0 24 24">
+      <g transform="rotate(-35 12 12)">
+        <rect x="1.5" y="8" width="21" height="8" rx="4"/>
+        <rect x="8.5" y="9.3" width="7" height="5.4" rx="1"/>
+        <circle cx="10.3" cy="11" r=".35"/>
+        <circle cx="13.7" cy="11" r=".35"/>
+        <circle cx="12" cy="13" r=".35"/>
+      </g>
+    </symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24">
+      <path d="M12 3c.5 5.5 3 8.5 9 9-6 .5-8.5 3.5-9 9-.5-5.5-3-8.5-9-9 6-.5 8.5-3.5 9-9z"/>
+    </symbol>
+  </svg>
+
+  <!-- ===================== ヘッダー ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <svg class="logo-icon" aria-hidden="true"><use href="#i-heart"/></svg>
+        のびサポ
+      </a>
+
+      <!-- スマホ用メニュー（チェックボックスで開閉。JavaScript不使用） -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="メニューを開く">
+        <span></span>
+      </label>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#about">のびサポについて</a></li>
+          <li><a href="#service">サービス</a></li>
+          <li><a href="#seminar">講演・セミナー実績</a></li>
+          <!-- 支援事例：公開時は非表示。戻すときは hidden を消してください -->
+          <li hidden><a href="#case">支援事例</a></li>
+          <li><a href="#profile">プロフィール</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== 1. トップ ===================== -->
+    <section id="top" class="hero">
+      <!-- 装飾（--x 横位置 / --y 縦位置 / --s 大きさ / --r 傾き） -->
+      <svg class="deco is-lav" style="--x:3%;--y:10%;--s:46px;--r:-14deg" aria-hidden="true"><use href="#i-heart"/></svg>
+      <svg class="deco is-black" style="--x:44%;--y:6%;--s:30px;--r:8deg" aria-hidden="true"><use href="#i-cross"/></svg>
+      <svg class="deco is-sky pc-deco" style="--x:6%;--y:78%;--s:56px;--r:20deg" aria-hidden="true"><use href="#i-bandage"/></svg>
+      <svg class="deco is-black" style="--x:90%;--y:84%;--s:34px;--r:-10deg" aria-hidden="true"><use href="#i-heart-broken"/></svg>
+      <svg class="deco is-lav pc-deco" style="--x:52%;--y:88%;--s:28px;--r:0deg" aria-hidden="true"><use href="#i-sparkle"/></svg>
+
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-label">
+            <svg aria-hidden="true"><use href="#i-heart"/></svg>
+            埼玉県寄居町のSNSコンサル
+          </p>
+          <h1 class="hero-title">
+            飲食の現場を知る<br>SNSコンサルが、<br>
+            地域のお店の<span class="mark">Instagram</span>を<br>
+            <span class="mark">売上につながる形</span>に<br>育てます
+          </h1>
+          <p class="hero-lead">
+            「投稿はしているけれど、お客さんが増えている実感がない」。そんなお店の声に、現場目線で寄り添います。
+          </p>
+          <a href="#contact" class="btn">
+            <svg aria-hidden="true"><use href="#i-ribbon"/></svg>
+            お問い合わせはこちら
+          </a>
+        </div>
+
+        <!-- 【仮】メインビジュアル：画像を用意したら下の div を <img src="画像ファイル名" alt="" class="hero-visual"> に差し替えてください -->
+        <div class="hero-visual placeholder">
+          <svg class="hero-visual-deco" aria-hidden="true"><use href="#i-ribbon"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. のびサポについて ===================== -->
+    <section id="about" class="section">
+      <svg class="deco is-sky" style="--x:4%;--y:16%;--s:40px;--r:-18deg" aria-hidden="true"><use href="#i-ribbon"/></svg>
+      <svg class="deco is-black pc-deco" style="--x:92%;--y:22%;--s:26px;--r:12deg" aria-hidden="true"><use href="#i-cross"/></svg>
+      <svg class="deco is-lav" style="--x:88%;--y:80%;--s:38px;--r:14deg" aria-hidden="true"><use href="#i-heart"/></svg>
+
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">ABOUT</p>
+          <h2 class="section-title">のびサポについて</h2>
+        </div>
+        <div class="about-body text-box">
+          <p>
+            のびサポは、埼玉県寄居町を拠点に、地域のお店や事業者のSNS活用を支援する個人事業です。
+          </p>
+          <p>
+            代表の広瀬可奈は、飲食店での接客・運営の経験を持つSNSコンサルタントです。お店の忙しさや、お客さまが来店を決めるきっかけを現場で見てきたからこそ、「続けられる」「売上につながる」Instagram運用を一緒に考えます。
+          </p>
+          <p>
+            フォロワー数を増やすことだけをゴールにせず、来店・予約・リピートにつながる発信を、お店に合わせて育てていきます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. サービス ===================== -->
+    <section id="service" class="section section-alt">
+      <svg class="deco is-black" style="--x:5%;--y:8%;--s:32px;--r:-8deg" aria-hidden="true"><use href="#i-heart-broken"/></svg>
+      <svg class="deco is-sky pc-deco" style="--x:90%;--y:10%;--s:54px;--r:28deg" aria-hidden="true"><use href="#i-bandage"/></svg>
+      <svg class="deco is-lav pc-deco" style="--x:2%;--y:86%;--s:30px;--r:0deg" aria-hidden="true"><use href="#i-sparkle"/></svg>
+
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">SERVICE</p>
+          <h2 class="section-title">サービス</h2>
+        </div>
+        <div class="card-grid">
+
+          <article class="card">
+            <svg class="card-icon" aria-hidden="true"><use href="#i-ribbon"/></svg>
+            <p class="card-num">01</p>
+            <h3 class="card-title">商工会の専門家派遣</h3>
+            <p>商工会の専門家派遣制度を通じて、事業者さまのもとへ伺い、Instagramの現状分析から改善策の提案、投稿づくりのアドバイスまで個別に支援します。</p>
+          </article>
+
+          <article class="card">
+            <svg class="card-icon" aria-hidden="true"><use href="#i-sparkle"/></svg>
+            <p class="card-num">02</p>
+            <h3 class="card-title">セミナー講師</h3>
+            <p>商工会・団体さま向けに、Instagramの基礎から集客につながる投稿のコツまで、参加者のレベルに合わせたセミナーを行います。</p>
+          </article>
+
+          <article class="card">
+            <svg class="card-icon" aria-hidden="true"><use href="#i-heart"/></svg>
+            <p class="card-num">03</p>
+            <h3 class="card-title">SNS運用代行</h3>
+            <p>投稿の企画・撮影・作成・分析までをお任せいただけます。お店の雰囲気や強みを丁寧にヒアリングし、売上につながる発信を継続的にサポートします。</p>
+          </article>
+
+          <article class="card">
+            <svg class="card-icon" aria-hidden="true"><use href="#i-cross"/></svg>
+            <p class="card-num">04</p>
+            <h3 class="card-title">生成AI講座</h3>
+            <p>ChatGPTやClaudeなどの生成AIを使って、投稿文づくりやアイデア出しを効率化する方法をお伝えします。はじめての方にもわかりやすく解説します。</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 4. 講演・セミナー実績 ===================== -->
+    <section id="seminar" class="section">
+      <svg class="deco is-lav" style="--x:6%;--y:20%;--s:36px;--r:16deg" aria-hidden="true"><use href="#i-heart"/></svg>
+      <svg class="deco is-black" style="--x:90%;--y:70%;--s:28px;--r:-6deg" aria-hidden="true"><use href="#i-cross"/></svg>
+
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">SEMINAR</p>
+          <h2 class="section-title">講演・セミナー実績</h2>
+        </div>
+
+        <!-- 実績を追加するときは <li class="record-item">〜</li> をコピーして上に追加してください -->
+        <ul class="record-list">
+          <li class="record-item">
+            <p class="record-date">2026.01</p>
+            <div class="record-body">
+              <p class="record-host">越生町商工会青年部</p>
+              <p class="record-title">「インスタ投稿でターゲットに届く発信力を高めるセミナー」</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== 5. 支援事例 ===================== -->
+    <!-- 内容がそろうまで非表示。戻すときは hidden を消し、メニューの「支援事例」の hidden も消してください -->
+    <section id="case" class="section section-alt" hidden>
+      <svg class="deco is-sky" style="--x:3%;--y:6%;--s:44px;--r:-24deg" aria-hidden="true"><use href="#i-bandage"/></svg>
+      <svg class="deco is-lav pc-deco" style="--x:93%;--y:6%;--s:34px;--r:10deg" aria-hidden="true"><use href="#i-ribbon"/></svg>
+      <svg class="deco is-black pc-deco" style="--x:50%;--y:95%;--s:26px;--r:0deg" aria-hidden="true"><use href="#i-heart"/></svg>
+
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">CASE</p>
+          <h2 class="section-title">支援事例</h2>
+        </div>
+        <p class="section-note">※ 掲載準備中のため、仮の内容を表示しています。</p>
+
+        <div class="card-grid case-grid">
+
+          <!-- 【仮】支援事例1 -->
+          <article class="card case-card">
+            <!-- 【仮】画像枠：<img src="画像ファイル名" alt="" class="case-image"> に差し替え -->
+            <div class="case-image placeholder"><span class="placeholder-label">PHOTO</span></div>
+            <p class="case-tag">飲食店（カフェ）</p>
+            <h3 class="card-title">事例タイトルが入ります</h3>
+            <dl class="case-detail">
+              <dt>お悩み</dt>
+              <dd>ここにご相談時のお悩みが入ります。</dd>
+              <dt>支援内容</dt>
+              <dd>ここに実施した支援の内容が入ります。</dd>
+              <dt>成果</dt>
+              <dd>ここに支援後の変化・成果が入ります。</dd>
+            </dl>
+          </article>
+
+          <!-- 【仮】支援事例2 -->
+          <article class="card case-card">
+            <!-- 【仮】画像枠：<img src="画像ファイル名" alt="" class="case-image"> に差し替え -->
+            <div class="case-image placeholder"><span class="placeholder-label">PHOTO</span></div>
+            <p class="case-tag">飲食店（居酒屋）</p>
+            <h3 class="card-title">事例タイトルが入ります</h3>
+            <dl class="case-detail">
+              <dt>お悩み</dt>
+              <dd>ここにご相談時のお悩みが入ります。</dd>
+              <dt>支援内容</dt>
+              <dd>ここに実施した支援の内容が入ります。</dd>
+              <dt>成果</dt>
+              <dd>ここに支援後の変化・成果が入ります。</dd>
+            </dl>
+          </article>
+
+          <!-- 【仮】支援事例3 -->
+          <article class="card case-card">
+            <!-- 【仮】画像枠：<img src="画像ファイル名" alt="" class="case-image"> に差し替え -->
+            <div class="case-image placeholder"><span class="placeholder-label">PHOTO</span></div>
+            <p class="case-tag">小売店</p>
+            <h3 class="card-title">事例タイトルが入ります</h3>
+            <dl class="case-detail">
+              <dt>お悩み</dt>
+              <dd>ここにご相談時のお悩みが入ります。</dd>
+              <dt>支援内容</dt>
+              <dd>ここに実施した支援の内容が入ります。</dd>
+              <dt>成果</dt>
+              <dd>ここに支援後の変化・成果が入ります。</dd>
+            </dl>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. プロフィール ===================== -->
+    <section id="profile" class="section">
+      <svg class="deco is-lav" style="--x:4%;--y:12%;--s:38px;--r:-10deg" aria-hidden="true"><use href="#i-heart-broken"/></svg>
+      <svg class="deco is-sky pc-deco" style="--x:92%;--y:76%;--s:40px;--r:18deg" aria-hidden="true"><use href="#i-ribbon"/></svg>
+      <svg class="deco is-black" style="--x:88%;--y:14%;--s:24px;--r:0deg" aria-hidden="true"><use href="#i-sparkle"/></svg>
+
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">PROFILE</p>
+          <h2 class="section-title">プロフィール</h2>
+        </div>
+        <div class="profile">
+          <div class="profile-photo-wrap">
+            <!-- 【仮】写真：画像を用意したら下の div を <img src="画像ファイル名" alt="広瀬可奈" class="profile-photo"> に差し替えてください -->
+            <div class="profile-photo placeholder"></div>
+            <svg class="profile-bandage" aria-hidden="true"><use href="#i-bandage"/></svg>
+            <svg class="profile-heart" aria-hidden="true"><use href="#i-heart"/></svg>
+          </div>
+
+          <div class="profile-body text-box">
+            <p class="profile-role">のびサポ 代表</p>
+            <p class="profile-name">広瀬 可奈<span class="profile-name-kana">ひろせ かな</span></p>
+
+            <ul class="profile-history">
+              <li>高知県出身</li>
+              <li>飲食店8店舗で接客・運営を経験</li>
+              <li>企業にてInstagram運用代行、商工会セミナー講師を担当</li>
+              <li>独立し、のびサポを創業。埼玉県寄居町を拠点に活動中</li>
+            </ul>
+
+            <p class="profile-message">
+              飲食の現場で、お客さまの「行ってみたい」が生まれる瞬間をたくさん見てきました。その経験を活かして、地域のお店の魅力がきちんと伝わる発信をお手伝いします。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 7. お問い合わせ ===================== -->
+    <section id="contact" class="section section-alt">
+      <svg class="deco is-black" style="--x:6%;--y:18%;--s:30px;--r:-12deg" aria-hidden="true"><use href="#i-cross"/></svg>
+      <svg class="deco is-lav" style="--x:90%;--y:16%;--s:44px;--r:14deg" aria-hidden="true"><use href="#i-heart"/></svg>
+      <svg class="deco is-sky pc-deco" style="--x:8%;--y:78%;--s:50px;--r:-30deg" aria-hidden="true"><use href="#i-bandage"/></svg>
+
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">CONTACT</p>
+          <h2 class="section-title">お問い合わせ</h2>
+        </div>
+        <div class="contact-box">
+          <p>
+            ご相談・ご依頼・セミナーのご依頼は、InstagramのDMよりお気軽にご連絡ください。
+          </p>
+          <a href="https://www.instagram.com/kana_nobisapo/" class="btn" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true"><use href="#i-heart"/></svg>
+            Instagramで問い合わせる
+          </a>
+          <p class="contact-url">
+            <a href="https://www.instagram.com/kana_nobisapo/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/kana_nobisapo/</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== フッター ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-deco" aria-hidden="true">
+        <svg><use href="#i-heart"/></svg>
+        <svg><use href="#i-cross"/></svg>
+        <svg><use href="#i-ribbon"/></svg>
+        <svg><use href="#i-cross"/></svg>
+        <svg><use href="#i-heart"/></svg>
+      </p>
+      <p class="footer-name">のびサポ</p>
+      <p class="footer-area">埼玉県寄居町</p>
+      <p class="copyright"><small>&copy; 2026 のびサポ</small></p>
+    </div>
+  </footer>
+
+</body>
+</html>
