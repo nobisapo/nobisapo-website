@@ -506,7 +506,36 @@ svg {
 }
 
 .record-body {
+  flex: 1;
   padding: 22px 28px;
+}
+
+/* 実績のチラシ画像（サムネイル） */
+.record-flyer {
+  flex-shrink: 0;
+  align-self: center;
+  width: 92px;
+  margin: 16px 24px 16px 0;
+  border: 2px solid var(--black);
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+  transition: transform 0.2s ease;
+}
+
+.record-flyer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.record-flyer:hover {
+  transform: rotate(-2deg) scale(1.04);
+}
+
+.record-flyer:focus-visible {
+  outline: 3px solid var(--lav-deep);
+  outline-offset: 3px;
 }
 
 .record-host {
@@ -885,6 +914,12 @@ svg {
 
   .record-body {
     padding: 18px 20px;
+  }
+
+  .record-flyer {
+    align-self: flex-start;
+    width: 140px;
+    margin: 0 20px 20px;
   }
 
   .profile {
